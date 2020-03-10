@@ -5,7 +5,7 @@
 对于遵循微软的DbProviderFactory设计的驱动，DbCore可以管理各种类型的数据库，包括：
 Access、SQLite、SqlServer、MySql、Oracle、Firebird、PostgreSQL、DB2、Sybase ...
 
-DbCore的使用及其简单，只需三步，使用步骤如下：
+DbCore的使用极其简单，只需三步，使用步骤如下：
 
 第一步：下载数据库驱动程序，将dll及其依赖项放在```Providers```文件夹中，下面是各种数据库驱动下载:
 
