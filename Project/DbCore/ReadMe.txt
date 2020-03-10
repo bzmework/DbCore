@@ -43,7 +43,7 @@ DbCore的使用及其简单，只需三步，使用步骤如下：
 下载位置：    https://www.nuget.org/packages/System.Data.OracleClient/
 
 类型:        Oracle (Oracle Data Provider for .NET (ODP.NET) Core)
-提供程序名称： System.Data.OracleClient
+提供程序名称： Oracle.ManagedDataAccess.Client
 项目位置：
 下载位置：    https://www.nuget.org/packages/Oracle.ManagedDataAccess.Core/
 
