@@ -1,5 +1,5 @@
 # DbCore
- DbCore是一个线程安全的数据库持久层管理器，基于.Net Core。
+ DbCore是一个线程安全的数据库持久层管理器，基于.Net Core(并不局限于此)。
 
 设计DbCore的目的是回归简单，如果你习惯于编写Sql而不是ORM映射，DbCore是非常好的选择，
 对于遵循微软的DbProviderFactory设计的驱动，DbCore可以管理各种类型的数据库，包括：
