@@ -5,8 +5,8 @@
 对于遵循微软的DbProviderFactory设计的驱动，DbCore可以管理各种类型的数据库，包括：
 Access、SQLite、SqlServer、MySql、Oracle、Firebird、PostgreSQL、DB2、Sybase ...
 
-DbCore并没有完全拒绝ORM，并支持Linq，其应用逻辑是：直接编写SQL语句从数据库查询数据，
-缓存到本地以后作为内存数据源应用Linq进行查询。至于采用实体对表进行增删改操作目前不再考虑范围之内，
+DbCore并没有完全拒绝ORM，并支持Linq，其应用逻辑是：```直接编写SQL语句从数据库查询数据，
+缓存到本地以后作为内存数据源应用Linq进行查询。```这是 DbCore设计的核心思想。至于采用实体对表进行增删改操作目前不再考虑范围之内，
 你仍然需要编写SQL语句对表进行增删改。
 
 DbCore的使用极其简单，只需三步，使用步骤如下：
