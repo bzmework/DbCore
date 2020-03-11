@@ -565,6 +565,11 @@
             这个析构函数只有在Dispose方法没有被调用时才会运行。
             </summary>
         </member>
+        <member name="M:DbCore.DbSession.Close">
+            <summary>
+            关闭会话
+            </summary>
+        </member>
         <member name="M:DbCore.DbSession.Dispose">
             <summary>
             销毁。不要使此方法为虚方法。不应让派生类能重写此方法。
