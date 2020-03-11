@@ -1,7 +1,12 @@
 ﻿DbCore是一个高性能线程安全的数据库持久层管理器，基于.Net Core。
-设计DbCore的目的是回归简单，如果你习惯于编写Sql而不是ORM映射，DbCore是非常好的选择，
+
+设计DbCore的目的是回归简单，如果你习惯于编写SQL而不是ORM映射，DbCore是非常好的选择，
 对于遵循微软的DbProviderFactory设计的驱动，DbCore可以管理各种类型的数据库，包括：
 Access、SQLite、SqlServer、MySql、Oracle、Firebird、PostgreSQL、DB2、Sybase ...
+
+DbCore并没有完全拒绝ORM，并支持Linq，其应用逻辑是：直接编写SQL语句从数据库查询数据，
+缓存到本地以后作为内存数据源应用Linq进行查询。至于采用实体对表进行增删改操作目前不再考虑范围之内，
+你仍然需要编写SQL语句对表进行增删改。
 
 DbCore的使用及其简单，只需三步，使用步骤如下：
 
@@ -168,3 +173,7 @@ DbCore的使用及其简单，只需三步，使用步骤如下：
     查询记录4100条, 返回List<T>, 消耗24毫秒。Linq查询记录2000条, 消耗0毫秒。
 
    （具体性能视配置而定）
+     (你需要明白返回List<T>比DataTable快的原因，是因为采用DataReader从数据库读取数据，
+      即采用仅向前游标查询数据，而不是写法有多牛逼，速度的快慢取决于数据库底层驱动)
+
+最后，DbCore并没有什么花哨的东西，它只是合理管理和简单实用。
