@@ -1,0 +1,1011 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DbCore</name>
+    </assembly>
+    <members>
+        <member name="T:DbCore.DataSource">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="M:DbCore.DataSource.#ctor">
+            <summary>
+            构造
+            </summary>
+        </member>
+        <member name="M:DbCore.DataSource.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            析构
+            </summary>
+            <param name="name"></param>
+            <param name="type"></param>
+            <param name="provider"></param>
+            <param name="connectionString"></param>
+        </member>
+        <member name="P:DbCore.DataSource.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:DbCore.DataSource.Type">
+            <summary>
+            类型(例如:SQLServer,Access,Oracle,Sqlite,MySql,...)
+            </summary>
+        </member>
+        <member name="P:DbCore.DataSource.Provider">
+            <summary>
+            数据提供器(例如:System.Data.Odbc,System.Data.OleDb,System.Data.SqlClient,System.Data.OracleClient,System.Data.SQLite,...)
+            </summary>
+        </member>
+        <member name="P:DbCore.DataSource.ConnectionString">
+            <summary>
+            连接串
+            </summary>
+        </member>
+        <member name="T:DbCore.DataSources">
+            <summary>
+            数据源集合
+            </summary>
+        </member>
+        <member name="P:DbCore.DataSources.ConfigFile">
+            <summary>
+            返回数据源配置文件
+            </summary>
+        </member>
+        <member name="P:DbCore.DataSources.Count">
+            <summary>
+            数据源数量
+            </summary>
+        </member>
+        <member name="M:DbCore.DataSources.#ctor">
+            <summary>
+            构造
+            </summary>
+        </member>
+        <member name="M:DbCore.DataSources.Finalize">
+            <summary>
+            析构
+            </summary>
+        </member>
+        <member name="M:DbCore.DataSources.GetEnumerator">
+            <summary>
+            枚举器
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DbCore.DataSources.Exists(System.String)">
+            <summary>
+            数据源是否存在
+            </summary>
+            <param name="name">帐套名称</param>
+            <returns>存在返回true,否则返回false</returns>
+        </member>
+        <member name="M:DbCore.DataSources.Exists(System.String,DbCore.DataSource@)">
+            <summary>
+            数据源是否存在
+            </summary>
+            <param name="name">数据源名称</param>
+            <param name="dataSource">返回当前找到的数据源</param>
+            <returns>存在返回true,否则返回false</returns>
+        </member>
+        <member name="M:DbCore.DataSources.Add(System.String,System.String,System.String,System.String)">
+            <summary>
+            增加一个数据源
+            </summary>
+            <param name="name">名称(必须唯一)</param>
+            <param name="type">类型(例如:SQLServer,Access,Oracle,Sqlite,MySql,...)</param>
+            <param name="provider">数据提供器(例如:System.Data.Odbc,System.Data.OleDb,System.Data.SqlClient,System.Data.OracleClient,System.Data.SQLite,...)</param>
+            <param name="connectionString">连接串(关于连接串参见http://www.connectionstrings.com)</param>
+            <returns>返回新增加的数据源对象</returns>
+        </member>
+        <member name="M:DbCore.DataSources.Add(DbCore.DataSource)">
+            <summary>
+            增加一个数据源
+            </summary>
+            <param name="dataSource">数据源对象</param>
+            <returns>成功返回真</returns>
+        </member>
+        <member name="M:DbCore.DataSources.Remove(System.String)">
+            <summary>
+            删除一个数据源
+            </summary>
+            <param name="name">名称</param>
+        </member>
+        <member name="M:DbCore.DataSources.Remove(DbCore.DataSource)">
+            <summary>
+            删除一个数据源
+            </summary>
+            <param name="dataSource">数据源对象</param>
+        </member>
+        <member name="M:DbCore.DataSources.Clear">
+            <summary>
+            清除数据源列表
+            </summary>
+        </member>
+        <member name="M:DbCore.DataSources.Refresh">
+            <summary>
+            刷新数据源列表
+            </summary>
+        </member>
+        <member name="M:DbCore.DataSources.Save">
+            <summary>
+            保存数据源配置列表到配置文件
+            </summary>
+            <returns>成功返回true,否则返回false</returns>
+        </member>
+        <member name="M:DbCore.DataSources.LoadDataSource">
+            <summary>
+            从配置文件加载数据源列表
+            </summary>
+        </member>
+        <member name="T:DbCore.DbProvider">
+            <summary>
+            数据库提供程序
+            </summary>
+        </member>
+        <member name="M:DbCore.DbProvider.#ctor">
+            <summary>
+            实例化
+            </summary>
+        </member>
+        <member name="M:DbCore.DbProvider.#ctor(System.String,System.String,System.String,System.Data.Common.DbProviderFactory)">
+            <summary>
+            实例化
+            </summary>
+            <param name="name">数据库提供程序名称</param>
+            <param name="fullName">数据库提供程序全称</param>
+            <param name="assembly">数据库提供程序程序集</param>
+            <param name="factory">数据库提供程序工厂</param>
+        </member>
+        <member name="P:DbCore.DbProvider.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:DbCore.DbProvider.FullName">
+            <summary>
+            全称
+            </summary>
+        </member>
+        <member name="P:DbCore.DbProvider.Assembly">
+            <summary>
+            程序集
+            </summary>
+        </member>
+        <member name="P:DbCore.DbProvider.Factory">
+            <summary>
+            数据库提供程序工厂
+            </summary>
+        </member>
+        <member name="T:DbCore.DbProviders">
+            <summary>
+            数据库提供程序
+            </summary>
+        </member>
+        <member name="P:DbCore.DbProviders.ProviderPath">
+            <summary>
+            数据库提供程序路径
+            </summary>
+        </member>
+        <member name="P:DbCore.DbProviders.Count">
+            <summary>
+            数据库提供程序数量
+            </summary>
+        </member>
+        <member name="M:DbCore.DbProviders.#ctor">
+            <summary>
+            构造
+            </summary>
+        </member>
+        <member name="M:DbCore.DbProviders.Finalize">
+            <summary>
+            析构
+            </summary>
+        </member>
+        <member name="M:DbCore.DbProviders.GetEnumerator">
+            <summary>
+            枚举器
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DbCore.DbProviders.Exists(System.String)">
+            <summary>
+            数据源是否存在
+            </summary>
+            <param name="name">帐套名称</param>
+            <returns>存在返回true,否则返回false</returns>
+        </member>
+        <member name="M:DbCore.DbProviders.Exists(System.String,DbCore.DbProvider@)">
+            <summary>
+            数据库提供程序是否存在
+            </summary>
+            <param name="name">提供程序名称</param>
+            <param name="provider">返回当前找到的提供程序</param>
+            <returns>存在返回true,否则返回false</returns>
+        </member>
+        <member name="M:DbCore.DbProviders.Add(DbCore.DbProvider)">
+            <summary>
+            增加一个数据库提供程序
+            </summary>
+            <param name="provider">数据库提供程序对象</param>
+            <returns>成功返回真</returns>
+        </member>
+        <member name="M:DbCore.DbProviders.Remove(System.String)">
+            <summary>
+            删除一个数据库提供程序
+            </summary>
+            <param name="name">名称</param>
+        </member>
+        <member name="M:DbCore.DbProviders.Remove(DbCore.DbProvider)">
+            <summary>
+            删除一个数据库提供程序
+            </summary>
+            <param name="provider">数据库提供程序对象</param>
+        </member>
+        <member name="M:DbCore.DbProviders.Clear">
+            <summary>
+            清除数据库提供程序列表
+            </summary>
+        </member>
+        <member name="M:DbCore.DbProviders.Refresh">
+            <summary>
+            刷新数据库提供程序列表
+            </summary>
+        </member>
+        <member name="M:DbCore.DbProviders.RegisterProviders">
+            <summary>
+            注册数据库提供程序
+            </summary>
+        </member>
+        <member name="T:DbCore.DataType">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="F:DbCore.DataType.AnsiString">
+            <summary>
+            Ansi字符串
+            </summary>
+        </member>
+        <member name="F:DbCore.DataType.Binary">
+            <summary>
+            二进制
+            </summary>
+        </member>
+        <member name="F:DbCore.DataType.Boolean">
+            <summary>
+            布尔
+            </summary>
+        </member>
+        <member name="F:DbCore.DataType.Byte">
+            <summary>
+            字节
+            </summary>
+        </member>
+        <member name="F:DbCore.DataType.Currency">
+            <summary>
+            货币
+            </summary>
+        </member>
+        <member name="F:DbCore.DataType.Date">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="F:DbCore.DataType.DateTime">
+            <summary>
+            日期时间
+            </summary>
+        </member>
+        <member name="F:DbCore.DataType.Decimal">
+            <summary>
+            数值
+            </summary>
+        </member>
+        <member name="F:DbCore.DataType.Double">
+            <summary>
+            双精度
+            </summary>
+        </member>
+        <member name="F:DbCore.DataType.Guid">
+            <summary>
+            GUID
+            </summary>
+        </member>
+        <member name="F:DbCore.DataType.Short">
+            <summary>
+            短整型
+            </summary>
+        </member>
+        <member name="F:DbCore.DataType.Int">
+            <summary>
+            整型
+            </summary>
+        </member>
+        <member name="F:DbCore.DataType.Long">
+            <summary>
+            长整型
+            </summary>
+        </member>
+        <member name="F:DbCore.DataType.Numeric">
+            <summary>
+            数值
+            </summary>
+        </member>
+        <member name="F:DbCore.DataType.Object">
+            <summary>
+            对象
+            </summary>
+        </member>
+        <member name="F:DbCore.DataType.SByte">
+            <summary>
+            字节
+            </summary>
+        </member>
+        <member name="F:DbCore.DataType.Single">
+            <summary>
+            单精度
+            </summary>
+        </member>
+        <member name="F:DbCore.DataType.String">
+            <summary>
+            字符串
+            </summary>
+        </member>
+        <member name="F:DbCore.DataType.UShort">
+            <summary>
+            无符号短整型
+            </summary>
+        </member>
+        <member name="F:DbCore.DataType.UInt">
+            <summary>
+            无符号整型
+            </summary>
+        </member>
+        <member name="F:DbCore.DataType.ULong">
+            <summary>
+            无符号长整型
+            </summary>
+        </member>
+        <member name="F:DbCore.DataType.Time">
+            <summary>
+            时间
+            </summary>
+        </member>
+        <member name="F:DbCore.DataType.Xml">
+            <summary>
+            Xml
+            </summary>
+        </member>
+        <member name="T:DbCore.DataDirection">
+            <summary>
+            数据方向
+            </summary>
+        </member>
+        <member name="F:DbCore.DataDirection.Input">
+            <summary>
+            输入
+            </summary>
+        </member>
+        <member name="F:DbCore.DataDirection.Output">
+            <summary>
+            输出
+            </summary>
+        </member>
+        <member name="F:DbCore.DataDirection.InputOutput">
+            <summary>
+            输入/输出
+            </summary>
+        </member>
+        <member name="F:DbCore.DataDirection.ReturnValue">
+            <summary>
+            返回值
+            </summary>
+        </member>
+        <member name="T:DbCore.IParameter">
+            <summary>
+            参数接口
+            </summary>
+        </member>
+        <member name="P:DbCore.IParameter.Sql">
+            <summary>
+            Sql命令文本
+            </summary>
+        </member>
+        <member name="M:DbCore.IParameter.Add(System.String,System.Object,DbCore.DataType,DbCore.DataDirection)">
+            <summary>
+            增加参数
+            </summary>
+            <param name="name">名称</param>
+            <param name="value">值</param>
+            <param name="type">数据类型</param>
+            <param name="direction">数据方向</param>
+        </member>
+        <member name="M:DbCore.IParameter.Value(System.String)">
+            <summary>
+            参数值
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DbCore.IParameter.Excute">
+            <summary>
+            执行
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:DbCore.Parameter">
+            <summary>
+            参数
+            </summary>
+        </member>
+        <member name="M:DbCore.Parameter.#ctor">
+            <summary>
+            构造
+            </summary>
+        </member>
+        <member name="M:DbCore.Parameter.Finalize">
+            <summary>
+            卸载资源。
+            这个析构函数只有在Dispose方法没有被调用时才会运行。
+            </summary>
+        </member>
+        <member name="M:DbCore.Parameter.Dispose">
+            <summary>
+            销毁。不要使此方法为虚方法。不应让派生类能重写此方法。
+            </summary>
+        </member>
+        <member name="M:DbCore.Parameter.Dispose(System.Boolean)">
+            <summary>
+            在两个不同的场景中执行Dispose(bool Dispose)：
+            如果dispose = true，则该方法已被用户代码直接或间接调用。可以释放托管和非托管资源(Managed and unmanaged resources)。
+            如果dispose = false，则运行时已从终结器(finalizer,即析构函数)内部调用该方法，您不应再引用其他对象，只能释放非托管资源。
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="P:DbCore.Parameter.Command">
+            <summary>
+            设置命令对象
+            </summary>
+        </member>
+        <member name="P:DbCore.Parameter.Sql">
+            <summary>
+            设置Sql命令文本
+            </summary>
+        </member>
+        <member name="M:DbCore.Parameter.Add(System.String,System.Object,DbCore.DataType,DbCore.DataDirection)">
+            <summary>
+            增加参数
+            </summary>
+            <param name="name">名称</param>
+            <param name="value">值</param>
+            <param name="type">数据类型</param>
+            <param name="direction">数据方向</param>
+        </member>
+        <member name="M:DbCore.Parameter.Value(System.String)">
+            <summary>
+            参数值
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DbCore.Parameter.Excute">
+            <summary>
+            执行
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DbCore.Parameter.ConvertToDbType(DbCore.DataType)">
+            <summary>
+            将类型转换成数据库数据类型
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DbCore.Parameter.ConvertToParameterDirection(DbCore.DataDirection)">
+            <summary>
+            将方向转换成参数方向
+            </summary>
+            <param name="direction"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DbCore.PersistentManager">
+            <summary>
+            持久层管理器
+            </summary>
+        </member>
+        <member name="M:DbCore.PersistentManager.#ctor">
+            <summary>
+            私有构造函数，防止实例化
+            </summary>
+        </member>
+        <member name="M:DbCore.PersistentManager.Finalize">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="P:DbCore.PersistentManager.DataSources">
+            <summary>
+            数据源集合
+            </summary>
+        </member>
+        <member name="P:DbCore.PersistentManager.Providers">
+            <summary>
+            数据库提供程序集合
+            </summary>
+        </member>
+        <member name="P:DbCore.PersistentManager.Instance">
+            <summary>
+            取得PersistentManager实例对象
+            </summary>
+        </member>
+        <member name="M:DbCore.PersistentManager.OpenSession(System.String)">
+            <summary>
+            打开一个会话
+            </summary>
+            <param name="name">数据源名称</param>
+            <returns>返回打开的会话对象</returns>
+        </member>
+        <member name="T:DbCore.DbSession">
+            <summary>
+            数据库会话
+            </summary>
+        </member>
+        <member name="M:DbCore.DbSession.#ctor(DbCore.DataSource,DbCore.DbProvider)">
+            <summary>
+            构造
+            </summary>
+            <param name="dataSource">数据源</param>
+            <param name="dbProvider">数据库提供程序</param>
+        </member>
+        <member name="M:DbCore.DbSession.Finalize">
+            <summary>
+            卸载资源。
+            这个析构函数只有在Dispose方法没有被调用时才会运行。
+            </summary>
+        </member>
+        <member name="M:DbCore.DbSession.Dispose">
+            <summary>
+            销毁。不要使此方法为虚方法。不应让派生类能重写此方法。
+            </summary>
+        </member>
+        <member name="M:DbCore.DbSession.Dispose(System.Boolean)">
+            <summary>
+            在两个不同的场景中执行Dispose(bool Dispose)：
+            如果dispose = true，则该方法已被用户代码直接或间接调用。可以释放托管和非托管资源(Managed and unmanaged resources)。
+            如果dispose = false，则运行时已从终结器(finalizer,即析构函数)内部调用该方法，您不应再引用其他对象，只能释放非托管资源。
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="P:DbCore.DbSession.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:DbCore.DbSession.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:DbCore.DbSession.Provider">
+            <summary>
+            数据提供器
+            </summary>
+        </member>
+        <member name="P:DbCore.DbSession.ConnectionString">
+            <summary>
+            连接串
+            </summary>
+        </member>
+        <member name="P:DbCore.DbSession.Parameter">
+            <summary>
+            参数
+            </summary>
+        </member>
+        <member name="M:DbCore.DbSession.Execute(System.String)">
+            <summary>
+            执行一不返回记录的命令
+            </summary>
+            <param name="sql">SQL操作命令</param>
+            <returns>返回命令影响到的行数，失败返回0</returns>
+        </member>
+        <member name="M:DbCore.DbSession.Execute(System.Data.CommandType,System.String)">
+            <summary>
+            执行一不返回记录的命令
+            </summary>
+            <param name="commandType">命令类型(存储过程、表或SQL命令文本)</param>
+            <param name="commandText">存储过程名、表名或SQL操作命令</param>
+            <returns>返回命令影响到的行数，失败返回0</returns>
+        </member>
+        <member name="M:DbCore.DbSession.ExecuteQuery(System.String)">
+            <summary>
+            执行SQL查询
+            </summary>
+            <param name="sql">SQL查询语句</param>
+            <returns>返回结果集，失败返回null</returns>
+        </member>
+        <member name="M:DbCore.DbSession.ExecuteQuery(System.String,System.String)">
+            <summary>
+            执行SQL查询
+            </summary>
+            <param name="sql">SQL查询语句</param>
+            <param name="tableName">用于表映射的源表的名称</param>
+            <returns>返回结果集，失败返回null</returns>
+        </member>
+        <member name="M:DbCore.DbSession.ExecuteQuery(System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            执行SQL查询
+            </summary>
+            <param name="sql">SQL查询语句</param>
+            <param name="startRecord">从其开始的从零开始的记录号</param>
+            <param name="maxRecords">要检索的最大记录数</param>
+            <param name="tableName">用于表映射的源表的名称</param>
+            <returns>返回结果集，失败返回null</returns>
+        </member>
+        <member name="M:DbCore.DbSession.ExecuteQuery``1(System.String)">
+            <summary>
+            执行SQL查询, 将结果集转换为实体集合
+            </summary>
+            <param name="sql">SQL查询语句</param>
+            <returns>实体集合</returns>
+        </member>
+        <member name="M:DbCore.DbSession.ExecuteReader(System.String)">
+            <summary>
+            返回SQL查询,返回一个DbDataReader对象
+            </summary>
+            <param name="sql">SQL查询语句</param>
+            <returns>返回一个DbDataReader对象，失败返回null</returns>
+        </member>
+        <member name="M:DbCore.DbSession.ExecuteReader(System.Data.CommandType,System.String)">
+            <summary>
+            返回SQL查询,返回一个DbDataReader对象
+            </summary>
+            <param name="commandType">命令类型(存储过程、表或SQL命令文本)</param>
+            <param name="commandText">存储过程名、表名或SQL操作命令</param>
+            <returns>返回一个DbDataReader对象，失败返回null</returns>
+        </member>
+        <member name="M:DbCore.DbSession.ExecuteScalar(System.String)">
+            <summary>
+            执行查询，并返回查询所返回的结果集中第一行的第一列。所有其他的列和行将被忽略。
+            </summary>
+            <param name="sql">SQL查询语句</param>
+            <returns>返回结果集中第一行的第一列，失败返回null</returns>
+        </member>
+        <member name="M:DbCore.DbSession.ExecuteScalar(System.Data.CommandType,System.String)">
+            <summary>
+            执行查询，并返回查询所返回的结果集中第一行的第一列。所有其他的列和行将被忽略。
+            </summary>
+            <param name="commandType">命令类型(存储过程、表或SQL命令文本)</param>
+            <param name="commandText">存储过程名、表名或SQL操作命令</param>
+            <returns>返回结果集中第一行的第一列，失败返回null</returns>
+        </member>
+        <member name="M:DbCore.DbSession.BeginTrans">
+            <summary>
+            开始事务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DbCore.DbSession.CommitTrans">
+            <summary>
+            提交事务
+            </summary>
+        </member>
+        <member name="M:DbCore.DbSession.RollbackTrans">
+            <summary>
+            回滚事务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DbCore.DbSession.OpenConn">
+            <summary>
+            打开连接
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DbCore.DbSession.CloseConn">
+            <summary>
+            关闭连接
+            </summary>
+        </member>
+        <member name="M:DbCore.DbSession.Dispose(System.IDisposable)">
+            <summary>
+            销毁对象
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:DbCore.DbSession.WriteLog(System.Exception)">
+            <summary>
+            写错误日志
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:DbCore.DbSession.ConvertReader``1(System.Data.IDataReader)">
+            <summary>
+            转换ExecuteReader结果为实体
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="reader"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DbCore.DbSession.ConvertValue(System.Object,System.Type)">
+            <summary>
+            转换为目标类型值
+            </summary>
+            <param name="value"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DbCore.DbSession.IsInteger(System.Object)">
+            <summary>
+            是否为整型
+            </summary>
+            <param name="value">要判定的值</param>
+            <returns></returns>
+        </member>
+        <member name="M:DbCore.DbSession.C2Bool(System.Object)">
+            <summary>
+            将object转换成bool(System.Boolean)
+            </summary>
+            <param name="value">要转换的值</param>
+            <returns>转换后的值</returns>
+        </member>
+        <member name="M:DbCore.DbSession.C2SByte(System.Object)">
+            <summary>
+            将object转换成sbyte(System.SByte)
+            </summary>
+            <param name="value">要转换的值</param>
+            <returns>转换后的值</returns>
+        </member>
+        <member name="M:DbCore.DbSession.C2Byte(System.Object)">
+            <summary>
+            将object转换成sbyte(System.Byte)
+            </summary>
+            <param name="value">要转换的值</param>
+            <returns>转换后的值</returns>
+        </member>
+        <member name="M:DbCore.DbSession.C2Short(System.Object)">
+            <summary>
+            将object转换成short(System.Int16)
+            </summary>
+            <param name="value">要转换的值</param>
+            <returns>转换后的值</returns>
+        </member>
+        <member name="M:DbCore.DbSession.C2UShort(System.Object)">
+            <summary>
+            将object转换成ushort(System.UInt16)
+            </summary>
+            <param name="value">要转换的值</param>
+            <returns>转换后的值</returns>
+        </member>
+        <member name="M:DbCore.DbSession.C2Int(System.Object)">
+            <summary>
+            将object转换成int(System.Int32)
+            </summary>
+            <param name="value">要转换的值</param>
+            <returns>转换后的值</returns>
+        </member>
+        <member name="M:DbCore.DbSession.C2UInt(System.Object)">
+            <summary>
+            将object转换成uint(System.UInt32)
+            </summary>
+            <param name="value">要转换的值</param>
+            <returns>转换后的值</returns>
+        </member>
+        <member name="M:DbCore.DbSession.C2Lng(System.Object)">
+            <summary>
+            将object转换成long(System.Int64)
+            </summary>
+            <param name="value">要转换的值</param>
+            <returns>转换后的值</returns>
+        </member>
+        <member name="M:DbCore.DbSession.C2ULng(System.Object)">
+            <summary>
+            将object转换成long(System.UInt64)
+            </summary>
+            <param name="value">要转换的值</param>
+            <returns>转换后的值</returns>
+        </member>
+        <member name="M:DbCore.DbSession.C2Dbl(System.Object)">
+            <summary>
+            将object转换成double(System.Double)
+            </summary>
+            <param name="value">要转换的值</param>
+            <returns>转换后的值</returns>
+        </member>
+        <member name="M:DbCore.DbSession.C2Flt(System.Object)">
+            <summary>
+            将object转换成float(System.Single)
+            </summary>
+            <param name="value">要转换的值</param>
+            <returns>转换后的值</returns>
+        </member>
+        <member name="M:DbCore.DbSession.C2Dec(System.Object)">
+            <summary>
+            将object转换成decimal(System.Decimal)
+            </summary>
+            <param name="value">要转换的值</param>
+            <returns>转换后的值</returns>
+        </member>
+        <member name="M:DbCore.DbSession.C2Date(System.Object)">
+            <summary>
+            将object转换成DateTime
+            </summary>
+            <param name="value">要转换的值</param>
+            <returns>转换后的值</returns>
+        </member>
+        <member name="M:DbCore.DbSession.C2Str(System.Object)">
+            <summary>
+            将object转换成string(System.String)
+            </summary>
+            <param name="value">要转换的值</param>
+            <returns>转换后的值</returns>
+        </member>
+        <member name="M:DbCore.DbSession.C2Chr(System.Object)">
+            <summary>
+            将object转换成char(System.Char)
+            </summary>
+            <param name="value">要转换的值</param>
+            <returns>转换后的值</returns>
+        </member>
+        <member name="M:DbCore.DbSession.C2Dbs(System.Object)">
+            <summary>
+            将object转换成数据库非空字符串
+            </summary>
+            <param name="value">要转换的值</param>
+            <returns>转换后的值</returns>
+        </member>
+        <member name="T:DbCore.ISession">
+            <summary>
+            会话接口
+            </summary>
+        </member>
+        <member name="P:DbCore.ISession.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:DbCore.ISession.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:DbCore.ISession.Provider">
+            <summary>
+            数据提供器(例如:System.Data.Odbc,System.Data.OleDb,System.Data.SqlClient,System.Data.OracleClient,System.Data.SQLite,System.Data.MySql,...)
+            </summary>
+        </member>
+        <member name="P:DbCore.ISession.ConnectionString">
+            <summary>
+            连接串
+            </summary>
+        </member>
+        <member name="P:DbCore.ISession.Parameter">
+            <summary>
+            参数
+            </summary>
+        </member>
+        <member name="M:DbCore.ISession.Execute(System.String)">
+            <summary>
+            执行一不返回记录的命令
+            </summary>
+            <param name="sql">SQL操作命令</param>
+            <returns>返回命令影响到的行数</returns>
+        </member>
+        <member name="M:DbCore.ISession.Execute(System.Data.CommandType,System.String)">
+            <summary>
+            执行一不返回记录的命令
+            </summary>
+            <param name="commandType">命令类型(存储过程、表或SQL命令文本)</param>
+            <param name="commandText">存储过程名、表名或SQL操作命令</param>
+            <returns>返回命令影响到的行数</returns>
+        </member>
+        <member name="M:DbCore.ISession.ExecuteQuery(System.String)">
+            <summary>
+            执行SQL查询
+            </summary>
+            <param name="sql">SQL查询语句</param>
+            <returns>返回结果集</returns>
+        </member>
+        <member name="M:DbCore.ISession.ExecuteQuery(System.String,System.String)">
+            <summary>
+            执行SQL查询
+            </summary>
+            <param name="sql">SQL查询语句</param>
+            <param name="tableName">用于表映射的源表的名称</param>
+            <returns>返回结果集</returns>
+        </member>
+        <member name="M:DbCore.ISession.ExecuteQuery(System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            执行SQL查询
+            </summary>
+            <param name="sql">SQL查询语句</param>
+            <param name="startRecord">从其开始的从零开始的记录号</param>
+            <param name="maxRecords">要检索的最大记录数</param>
+            <param name="tableName">用于表映射的源表的名称</param>
+            <returns>返回结果集</returns>
+        </member>
+        <member name="M:DbCore.ISession.ExecuteQuery``1(System.String)">
+            <summary>
+            执行SQL查询, 将结果集转换为实体集合
+            </summary>
+            <param name="sql">SQL查询语句</param>
+            <returns>实体集合</returns>
+        </member>
+        <member name="M:DbCore.ISession.ExecuteReader(System.String)">
+            <summary>
+            返回SQL查询,返回一个DbDataReader对象
+            </summary>
+            <param name="sql">SQL查询语句</param>
+            <returns>返回一个DbDataReader对象</returns>
+        </member>
+        <member name="M:DbCore.ISession.ExecuteReader(System.Data.CommandType,System.String)">
+            <summary>
+            返回SQL查询,返回一个DbDataReader对象
+            </summary>
+            <param name="commandType">命令类型(存储过程、表或SQL命令文本)</param>
+            <param name="commandText">存储过程名、表名或SQL操作命令</param>
+            <returns>返回一个DbDataReader对象</returns>
+        </member>
+        <member name="M:DbCore.ISession.ExecuteScalar(System.String)">
+            <summary>
+            执行查询，并返回查询所返回的结果集中第一行的第一列。所有其他的列和行将被忽略。
+            </summary>
+            <param name="sql">SQL查询语句</param>
+            <returns>返回结果集中第一行的第一列</returns>
+        </member>
+        <member name="M:DbCore.ISession.ExecuteScalar(System.Data.CommandType,System.String)">
+            <summary>
+            执行查询，并返回查询所返回的结果集中第一行的第一列。所有其他的列和行将被忽略。
+            </summary>
+            <param name="commandType">命令类型(存储过程、表或SQL命令文本)</param>
+            <param name="commandText">存储过程名、表名或SQL操作命令</param>
+            <returns>返回结果集中第一行的第一列</returns>
+        </member>
+        <member name="M:DbCore.ISession.BeginTrans">
+            <summary>
+            开始事务
+            </summary>
+            <returns>成功返回true,失败返回false</returns>
+        </member>
+        <member name="M:DbCore.ISession.CommitTrans">
+            <summary>
+            提交事务
+            </summary>
+            <returns>成功返回true,失败返回false</returns>
+        </member>
+        <member name="M:DbCore.ISession.RollbackTrans">
+            <summary>
+            回滚事务
+            </summary>
+            <returns>成功返回true,失败返回false</returns>
+        </member>
+        <member name="T:DbCore.TypeCache">
+            <summary>
+            类型缓存
+            </summary>
+        </member>
+        <member name="M:DbCore.TypeCache.GetType(System.Type)">
+            <summary>
+            获得类型的字段信息
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DbCore.FieldObject">
+            <summary>
+            字段对象
+            </summary>
+        </member>
+        <member name="P:DbCore.FieldObject.Name">
+            <summary>
+            字段名称
+            </summary>
+        </member>
+        <member name="P:DbCore.FieldObject.Value">
+            <summary>
+            字段信息
+            </summary>
+        </member>
+    </members>
+</doc>
