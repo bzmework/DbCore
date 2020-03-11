@@ -29,7 +29,7 @@ DbCore的使用及其简单，只需三步，使用步骤如下：
 
 类型:        SQLite(微软提供)
 提供程序名称： Microsoft.Data.Sqlite
-项目位置：    https://system.data.sqlite.org/
+项目位置：    https://docs.microsoft.com/zh-cn/ef/core/
 下载位置：    https://www.nuget.org/packages/Microsoft.Data.Sqlite/
 
 类型:        SqlServer
