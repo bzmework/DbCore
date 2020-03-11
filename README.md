@@ -174,7 +174,7 @@ DbCore的使用极其简单，只需三步，使用步骤如下：
     }
 ```
 
-性能测试（Oracle）：
+性能测试（Oracle）```(Test\ConsoleApp\bin\Debug\netcoreapp3.1\ConsoleApp.exe)```：
 
     查询记录4100条, 返回DataTable, 消耗1238毫秒。Linq查询记录2000条, 消耗19毫秒。
     查询记录4100条, 返回List<T>, 消耗24毫秒。Linq查询记录2000条, 消耗0毫秒。
