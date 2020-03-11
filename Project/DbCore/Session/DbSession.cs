@@ -75,6 +75,14 @@ namespace DbCore
         }
 
         /// <summary>
+        /// 关闭会话
+        /// </summary>
+        public void Close()
+        {
+            Dispose();
+        }
+
+        /// <summary>
         /// 销毁。不要使此方法为虚方法。不应让派生类能重写此方法。
         /// </summary>
         public void Dispose()
