@@ -14,32 +14,32 @@ DbCore的使用极其简单，只需三步，使用步骤如下：
 第一步：下载数据库驱动程序，将dll及其依赖项放在```Providers```文件夹中，下面是各种数据库驱动下载:
 
 ```
-类型:        Access(等支持Odbc驱动的各种数据库)
-提供程序名称： System.Data.Odbc
+类型:        Access(等支持Odbc驱动的各种数据库)（官方）
+提供程序名称： System.Data.Odbc 
 项目位置：    https://github.com/dotnet/corefx/
 下载位置：    https://www.nuget.org/packages/System.Data.Odbc/
 
-类型:        Access(等支持OleDb驱动的各种数据库)
+类型:        Access(等支持OleDb驱动的各种数据库)（官方）
 提供程序名称： System.Data.OleDb
 项目位置：    https://github.com/dotnet/corefx/
 下载位置：    https://www.nuget.org/packages/System.Data.OleDb/
 
-类型:        SQLite
+类型:        SQLite（官方）
 提供程序名称： System.Data.SQLite
 项目位置：    https://system.data.sqlite.org/
 下载位置：    https://www.nuget.org/packages/System.Data.SQLite.Core/
 
-类型:        SQLite(微软提供)
+类型:        SQLite(微软提供)（官方）
 提供程序名称： Microsoft.Data.Sqlite
 项目位置：    https://docs.microsoft.com/zh-cn/ef/core/
 下载位置：    https://www.nuget.org/packages/Microsoft.Data.Sqlite/
 
-类型:        SqlServer
+类型:        SqlServer（官方）
 提供程序名称： System.Data.SqlClient
 项目位置：    https://docs.microsoft.com/zh-cn/ef/core/
 下载位置：    https://www.nuget.org/packages/System.Data.SqlClient/
 
-类型:        MySql
+类型:        MySql（官方）
 提供程序名称： MySql.Data.MySqlClient
 项目位置：    https://dev.mysql.com/downloads/
 下载位置：    https://www.nuget.org/packages/MySql.Data/
@@ -49,22 +49,22 @@ DbCore的使用极其简单，只需三步，使用步骤如下：
 项目位置：    https://github.com/tonyrapozo/System.Data.OracleClient
 下载位置：    https://www.nuget.org/packages/System.Data.OracleClient/
 
-类型:        Oracle (Oracle Data Provider for .NET (ODP.NET) Core)
+类型:        Oracle (Oracle Data Provider for .NET (ODP.NET) Core)（官方）
 提供程序名称： Oracle.ManagedDataAccess.Client
 项目位置：
 下载位置：    https://www.nuget.org/packages/Oracle.ManagedDataAccess.Core/
 
-类型:        Firebird
+类型:        Firebird（官方）
 提供程序名称： FirebirdSql.Data.FirebirdClient
 项目位置：    http://www.firebirdsql.org/en/net-provider/
 下载位置：    https://www.nuget.org/packages/FirebirdSql.Data.FirebirdClient/
 
-类型:        PostgreSQL
+类型:        PostgreSQL（官方）
 提供程序名称： Npgsql
 项目位置：    https://www.npgsql.org
 下载位置：    https://www.nuget.org/packages/Npgsql/
 
-类型:        DB2
+类型:        DB2（官方）
 提供程序名称： IBM.Data.DB2.Core
 项目位置：    
 下载位置：    https://www.nuget.org/packages/IBM.Data.DB2.Core/
